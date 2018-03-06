@@ -14,7 +14,8 @@ def apply(config):
                 spec.get('image', 'cloudberry-lede-openwisp-docker:latest'),
                 detach=True,
                 cap_add=['NET_ADMIN'],
-                ports={'%s/tcp' % port: port for port in spec.get('ports', [1194])},
+                ports={'%s/%s' % (port.get("host", port.get("guest")),port.get("proto", "tcp")): port.get("guest")
+                       for port in spec.get('ports', [1194])},
                 labels=["cloudberry-docker-manager"],
                 name=name,
                 environment={
