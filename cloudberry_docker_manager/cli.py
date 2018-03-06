@@ -15,7 +15,7 @@ def main(**kw):
 @click.argument("key")
 def init(base_url, uuid, key):
     """Initialize a the docker manager"""
-    config = cloudberry_openwisp.Config(CONFIG)
+    config = cloudberry_openwisp.Config(CONFIG, base_url, uuid, key)
 
 @main.command()
 def update():
