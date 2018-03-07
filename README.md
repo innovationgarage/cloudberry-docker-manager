@@ -1,7 +1,7 @@
 # cloudberry-docker-manager
 
 This program is intended to be used in conjunction with https://github.com/innovationgarage/cloudberry-lede-openwisp-docker
-to configure docker using OpenWISP to run a set of containers with openWRT, each also configured using OpenWISP.
+and https://github.com/innovationgarage/cloudberry-netjson to configure docker using OpenWISP to run a set of containers with openWRT, each also configured using OpenWISP.
 
 Usage:
 
