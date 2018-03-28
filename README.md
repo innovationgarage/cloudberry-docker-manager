@@ -10,4 +10,4 @@ Usage:
 
 In production, a cronjob should be set up to run 'update'.
 
-The manager assumes that there is a docker image tagged cloudberry-lede-openwisp-docker:latest already available.
+The manager assumes that there is a docker image tagged *cloudberry-lede-openwisp-docker:latest* already available (unless the openwisp supplied config says to use another image). This image can be constructed by building https://github.com/innovationgarage/cloudberry-lede-openwisp-docker
