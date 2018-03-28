@@ -3,7 +3,7 @@
 import setuptools
 
 setuptools.setup(name='cloudberry-docker-manager',
-      version='0.1',
+      version='0.1.1',
       description='A docker container manager for Cloudberry',
       author='Egil Moeller',
       author_email='egil@innovationgarage.no',
