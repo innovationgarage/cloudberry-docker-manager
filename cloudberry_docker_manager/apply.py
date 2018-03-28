@@ -8,7 +8,7 @@ def apply(config):
     intended_containers = {"cloudberry-docker-manager-%s" % spec['uuid']: spec
                            for spec in config.config['data']['config']['containers']}
 
-    for name, spec in intended_containers.iteritems():
+    for name, spec in intended_containers.items():
         if name not in existing_containers:
             client.containers.run(
                 spec.get('image', 'cloudberry-lede-openwisp-docker:latest'),
@@ -24,7 +24,7 @@ def apply(config):
                     'OPENWISP_KEY': spec['key']
                 })
 
-    for name, container in existing_containers.iteritems():
+    for name, container in existing_containers.items():
         if name not in intended_containers:
             container.stop()
             container.remove()
